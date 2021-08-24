@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import mongoose from "mongoose";
 import listendpoints from "express-list-endpoints";
+
+import blogsRouter from "./Blogs/blogsRouter.js";
+import usersRouter from "./Users/usersRouter.js";
 const server = express();
 
 const port = process.env.PORT || 3000;
@@ -11,6 +14,9 @@ server.use(cors());
 server.use(express.json());
 
 // routes
+
+server.use("/blogs", blogsRouter);
+server.use("/users", usersRouter);
 
 // errorHandlers
 
