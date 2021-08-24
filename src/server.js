@@ -7,7 +7,7 @@ import blogsRouter from "./Blogs/blogsRouter.js";
 import usersRouter from "./Users/usersRouter.js";
 const server = express();
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3001;
 
 // middlewares
 server.use(cors());
